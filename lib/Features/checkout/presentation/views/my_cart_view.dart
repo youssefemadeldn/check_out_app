@@ -1,3 +1,4 @@
+import 'package:check_out_app/Features/checkout/presentation/views/payment_details_view.dart';
 import 'package:check_out_app/core/widgets/custom_app_bar_widget.dart';
 import 'package:check_out_app/core/widgets/custom_button.dart';
 import 'package:check_out_app/widgets/order_info_item.dart';
@@ -52,7 +53,18 @@ class MyCartView extends StatelessWidget {
             const SizedBox(
               height: 16,
             ),
-            const CustomButton(),
+            CustomButton(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return const PaymentDetailsView();
+                    },
+                  ),
+                );
+              },
+            ),
             const SizedBox(
               height: 20,
             ),
