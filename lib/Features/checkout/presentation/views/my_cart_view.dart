@@ -50,6 +50,11 @@ class MyCartView extends StatelessWidget {
             const SizedBox(
               height: 3,
             ),
+            const Divider(
+              height: 34,
+              thickness: 2,
+              color: Color(0xffC7C7C7),
+            ),
           ],
         ),
       ),
