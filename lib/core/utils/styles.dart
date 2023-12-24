@@ -38,4 +38,11 @@ abstract class Styles {
     fontWeight: FontWeight.w400,
     height: 0,
   );
+
+  static const TextStyle style22 = TextStyle(
+    fontWeight: FontWeight.w500,
+    fontSize: 22,
+    fontFamily: 'Inter',
+    height: 0,
+  );
 }

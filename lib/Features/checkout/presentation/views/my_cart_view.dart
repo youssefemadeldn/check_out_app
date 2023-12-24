@@ -1,4 +1,5 @@
 import 'package:check_out_app/core/utils/styles.dart';
+import 'package:check_out_app/core/widgets/custom_button.dart';
 import 'package:check_out_app/widgets/order_info_item.dart';
 import 'package:check_out_app/widgets/total_price_widget.dart';
 import 'package:flutter/material.dart';
@@ -57,6 +58,13 @@ class MyCartView extends StatelessWidget {
               color: Color(0xffC7C7C7),
             ),
             const TotalPriceWidget(title: 'Total', value: '\$50.97'),
+            const SizedBox(
+              height: 16,
+            ),
+            const CustomButton(),
+            const SizedBox(
+              height: 12,
+            ),
           ],
         ),
       ),
