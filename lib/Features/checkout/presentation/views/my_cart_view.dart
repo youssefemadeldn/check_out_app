@@ -1,4 +1,5 @@
 import 'package:check_out_app/core/utils/styles.dart';
+import 'package:check_out_app/widgets/order_info_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -52,30 +53,6 @@ class MyCartView extends StatelessWidget {
           ],
         ),
       ),
-    );
-  }
-}
-
-class OrderInfoItem extends StatelessWidget {
-  final String title, value;
-  const OrderInfoItem({super.key, required this.title, required this.value});
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Text(
-          title,
-          textAlign: TextAlign.center,
-          style: Styles.style18,
-        ),
-        const Spacer(),
-        Text(
-          value,
-          textAlign: TextAlign.center,
-          style: Styles.style18,
-        ),
-      ],
     );
   }
 }
