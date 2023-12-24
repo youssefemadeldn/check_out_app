@@ -17,14 +17,65 @@ class MyCartView extends StatelessWidget {
           style: Styles.style25,
         ),
       ),
-      body: Column(
-        children: [
-          const SizedBox(
-            height: 18,
-          ),
-          Image.asset('assets/images/item_in_basket.png'),
-        ],
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20),
+        child: Column(
+          children: [
+            const SizedBox(
+              height: 18,
+            ),
+            Image.asset('assets/images/item_in_basket.png'),
+            const SizedBox(
+              height: 25,
+            ),
+            const OrderInfoItem(
+              title: 'Order Subtotal',
+              value: '\$42.97',
+            ),
+            const SizedBox(
+              height: 3,
+            ),
+            const OrderInfoItem(
+              title: 'Discount',
+              value: '\$0',
+            ),
+            const SizedBox(
+              height: 3,
+            ),
+            const OrderInfoItem(
+              title: 'Shipping',
+              value: '\$8',
+            ),
+            const SizedBox(
+              height: 3,
+            ),
+          ],
+        ),
       ),
+    );
+  }
+}
+
+class OrderInfoItem extends StatelessWidget {
+  final String title, value;
+  const OrderInfoItem({super.key, required this.title, required this.value});
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Text(
+          title,
+          textAlign: TextAlign.center,
+          style: Styles.style18,
+        ),
+        const Spacer(),
+        Text(
+          value,
+          textAlign: TextAlign.center,
+          style: Styles.style18,
+        ),
+      ],
     );
   }
 }
