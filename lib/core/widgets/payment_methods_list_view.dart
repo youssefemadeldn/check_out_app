@@ -26,9 +26,15 @@ class _PaymentMethodsListViewState extends State<PaymentMethodsListView> {
         itemBuilder: (BuildContext context, int index) {
           return Padding(
             padding: const EdgeInsets.symmetric(horizontal: 8),
-            child: PaymentMethodItemWidget(
-              isActive: activeIndex == index,
-              image: paymentMethodsItemList[index],
+            child: GestureDetector(
+              onTap: () {
+                activeIndex = index;
+                setState(() {});
+              },
+              child: PaymentMethodItemWidget(
+                isActive: activeIndex == index,
+                image: paymentMethodsItemList[index],
+              ),
             ),
           );
         },
