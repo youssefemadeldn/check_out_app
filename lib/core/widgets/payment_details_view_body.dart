@@ -8,7 +8,10 @@ class PaymentDetailsViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Column(
       children: [
-        PaymentMethodItemWidget(isActive: false),
+        PaymentMethodItemWidget(
+          isActive: false,
+          image: 'assets/images/master_card.svg',
+        ),
       ],
     );
   }

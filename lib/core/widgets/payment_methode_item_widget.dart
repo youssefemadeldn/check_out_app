@@ -3,9 +3,11 @@ import 'package:flutter_svg/svg.dart';
 
 class PaymentMethodItemWidget extends StatelessWidget {
   final bool isActive;
+  final String image;
   const PaymentMethodItemWidget({
     super.key,
     required this.isActive,
+    required this.image,
   });
 
   @override
@@ -35,7 +37,7 @@ class PaymentMethodItemWidget extends StatelessWidget {
             color: Colors.white, borderRadius: BorderRadius.circular(15)),
         child: Center(
           child: SvgPicture.asset(
-            'assets/images/master_card.svg',
+            image,
             // height: 24,
           ),
         ),
