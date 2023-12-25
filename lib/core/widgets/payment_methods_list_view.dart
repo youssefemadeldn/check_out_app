@@ -1,12 +1,20 @@
 import 'package:check_out_app/core/widgets/payment_methode_item_widget.dart';
 import 'package:flutter/material.dart';
 
-class PaymentMethodsListView extends StatelessWidget {
+class PaymentMethodsListView extends StatefulWidget {
+  const PaymentMethodsListView({super.key});
+
+  @override
+  State<PaymentMethodsListView> createState() => _PaymentMethodsListViewState();
+}
+
+class _PaymentMethodsListViewState extends State<PaymentMethodsListView> {
   final List<String> paymentMethodsItemList = const [
     'assets/images/master_card.svg',
     'assets/images/paypal.svg',
   ];
-  const PaymentMethodsListView({super.key});
+
+  int activeIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +27,7 @@ class PaymentMethodsListView extends StatelessWidget {
           return Padding(
             padding: const EdgeInsets.symmetric(horizontal: 8),
             child: PaymentMethodItemWidget(
-              isActive: false,
+              isActive: activeIndex == index,
               image: paymentMethodsItemList[index],
             ),
           );
