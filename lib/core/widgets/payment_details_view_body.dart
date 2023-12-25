@@ -1,4 +1,4 @@
-import 'package:check_out_app/core/widgets/payment_methode_item_widget.dart';
+import 'package:check_out_app/core/widgets/payment_methods_list_view.dart';
 import 'package:flutter/material.dart';
 
 class PaymentDetailsViewBody extends StatelessWidget {
@@ -8,10 +8,7 @@ class PaymentDetailsViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Column(
       children: [
-        PaymentMethodItemWidget(
-          isActive: false,
-          image: 'assets/images/master_card.svg',
-        ),
+        PaymentMethodsListView(),
       ],
     );
   }
