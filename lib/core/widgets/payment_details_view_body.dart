@@ -47,7 +47,12 @@ class _CustomCreditCardState extends State<CustomCreditCard> {
           expiryDate: expiryDate,
           cardHolderName: cardHolderName,
           cvvCode: cvvCode,
-          onCreditCardModelChange: onCreditCardModelChange,
+          onCreditCardModelChange: (creditCardModel) {
+            cardNumber = creditCardModel.cardNumber;
+            expiryDate = creditCardModel.expiryDate;
+            cardHolderName = creditCardModel.cardHolderName;
+            cvvCode = creditCardModel.cvvCode;
+          },
           formKey: formKey,
         ),
       ],
