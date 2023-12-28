@@ -41,6 +41,14 @@ class _CustomCreditCardState extends State<CustomCreditCard> {
           showBackView: showBackView,
           onCreditCardWidgetChange: (creditCardBrand) {},
         ),
+        CreditCardForm(
+          cardNumber: cardNumber,
+          expiryDate: expiryDate,
+          cardHolderName: cardHolderName,
+          cvvCode: cvvCode,
+          onCreditCardModelChange: onCreditCardModelChange,
+          formKey: formKey,
+        ),
       ],
     );
   }
