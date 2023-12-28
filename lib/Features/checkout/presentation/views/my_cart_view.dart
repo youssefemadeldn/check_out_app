@@ -54,6 +54,7 @@ class MyCartView extends StatelessWidget {
               height: 16,
             ),
             CustomButton(
+              text: 'Complete Payment',
               onTap: () {
                 Navigator.push(
                   context,

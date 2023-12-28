@@ -3,9 +3,11 @@ import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
   final void Function()? onTap;
+  final String text;
   const CustomButton({
     super.key,
     this.onTap,
+    required this.text,
   });
 
   @override
@@ -19,9 +21,9 @@ class CustomButton extends StatelessWidget {
           color: const Color(0xff34a853),
           borderRadius: BorderRadius.circular(15),
         ),
-        child: const Center(
+        child: Center(
           child: Text(
-            'Complete Payment',
+            text,
             style: Styles.style22,
           ),
         ),
