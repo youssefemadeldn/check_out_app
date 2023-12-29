@@ -12,7 +12,7 @@ class PaymentDetailsViewBody extends StatefulWidget {
 
 class _PaymentDetailsViewBodyState extends State<PaymentDetailsViewBody> {
   final GlobalKey<FormState> formKey = GlobalKey();
-  final AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
+  AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
   @override
   Widget build(BuildContext context) {
     return CustomScrollView(slivers: [
@@ -29,6 +29,15 @@ class _PaymentDetailsViewBodyState extends State<PaymentDetailsViewBody> {
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16),
             child: CustomButton(
+              onTap: () {
+                // if  is specific to the formKey and validate
+                if (formKey.currentState!.validate()) {
+                  formKey.currentState!.save();
+                } else {
+                  // else  is specific to the autovalidateMode
+                  autovalidateMode = AutovalidateMode.always;
+                }
+              },
               text: 'Pay',
             ),
           ),
