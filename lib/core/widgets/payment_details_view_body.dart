@@ -15,8 +15,11 @@ class PaymentDetailsViewBody extends StatelessWidget {
         hasScrollBody: false,
         child: Align(
           alignment: Alignment(1, .1),
-          child: CustomButton(
-            text: 'Pay',
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 16),
+            child: CustomButton(
+              text: 'Pay',
+            ),
           ),
         ),
       ),
