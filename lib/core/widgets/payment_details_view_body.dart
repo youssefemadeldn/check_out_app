@@ -3,9 +3,14 @@ import 'package:check_out_app/core/widgets/custom_credit_card.dart';
 import 'package:check_out_app/core/widgets/payment_methods_list_view.dart';
 import 'package:flutter/material.dart';
 
-class PaymentDetailsViewBody extends StatelessWidget {
+class PaymentDetailsViewBody extends StatefulWidget {
   const PaymentDetailsViewBody({super.key});
 
+  @override
+  State<PaymentDetailsViewBody> createState() => _PaymentDetailsViewBodyState();
+}
+
+class _PaymentDetailsViewBodyState extends State<PaymentDetailsViewBody> {
   @override
   Widget build(BuildContext context) {
     return const CustomScrollView(slivers: [

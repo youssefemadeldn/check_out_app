@@ -11,7 +11,6 @@ class CustomCreditCard extends StatefulWidget {
 class _CustomCreditCardState extends State<CustomCreditCard> {
   // must initialize those variables
   String cardNumber = '', expiryDate = '', cardHolderName = '', cvvCode = '';
-  final GlobalKey<FormState> formKey = GlobalKey();
 
   bool showBackView = false;
 
