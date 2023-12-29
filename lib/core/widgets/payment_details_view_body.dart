@@ -15,8 +15,8 @@ class _PaymentDetailsViewBodyState extends State<PaymentDetailsViewBody> {
   final AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
   @override
   Widget build(BuildContext context) {
-    return const CustomScrollView(slivers: [
-      SliverToBoxAdapter(child: PaymentMethodsListView()),
+    return CustomScrollView(slivers: [
+      const SliverToBoxAdapter(child: PaymentMethodsListView()),
       SliverToBoxAdapter(
           child: CustomCreditCard(
         formKey: formKey,
@@ -25,9 +25,9 @@ class _PaymentDetailsViewBodyState extends State<PaymentDetailsViewBody> {
       SliverFillRemaining(
         hasScrollBody: false,
         child: Align(
-          alignment: Alignment(1, .1),
+          alignment: const Alignment(1, .1),
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16),
+            padding: const EdgeInsets.symmetric(horizontal: 16),
             child: CustomButton(
               text: 'Pay',
             ),
