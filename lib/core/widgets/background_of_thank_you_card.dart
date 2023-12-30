@@ -3,7 +3,7 @@ import 'package:check_out_app/core/widgets/card_info_widget.dart';
 import 'package:check_out_app/core/widgets/payment_item_info.dart';
 import 'package:check_out_app/widgets/total_price_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class BackgroundOfThankYouCard extends StatelessWidget {
@@ -16,7 +16,7 @@ class BackgroundOfThankYouCard extends StatelessWidget {
     return Container(
       width: double.infinity,
       decoration: ShapeDecoration(
-        color: const Color(0xFFD9D9D9),
+        color: const Color(0xFFEDEDED),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20),
         ),
