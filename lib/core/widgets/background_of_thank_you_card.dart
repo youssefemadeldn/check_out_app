@@ -1,6 +1,9 @@
 import 'package:check_out_app/core/utils/styles.dart';
+import 'package:check_out_app/core/widgets/card_info_widget.dart';
 import 'package:check_out_app/core/widgets/payment_item_info.dart';
+import 'package:check_out_app/widgets/total_price_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class BackgroundOfThankYouCard extends StatelessWidget {
   const BackgroundOfThankYouCard({
@@ -51,9 +54,16 @@ class BackgroundOfThankYouCard extends StatelessWidget {
               title: 'To',
               value: 'Sam Louis',
             ),
-            const SizedBox(
-              height: 20,
+            const Divider(
+              thickness: 2,
+              color: Color(0XFFC7C7C7),
+              height: 60,
             ),
+            const TotalPriceWidget(title: 'Total', value: '\$50.97'),
+            const SizedBox(
+              height: 23,
+            ),
+            const CardInfoWidget(),
           ],
         ),
       ),
