@@ -1,3 +1,6 @@
+import 'dart:developer';
+
+import 'package:check_out_app/Features/checkout/presentation/views/thank_you_view.dart';
 import 'package:check_out_app/core/widgets/custom_button.dart';
 import 'package:check_out_app/core/widgets/custom_credit_card.dart';
 import 'package:check_out_app/core/widgets/payment_methods_list_view.dart';
@@ -33,8 +36,17 @@ class _PaymentDetailsViewBodyState extends State<PaymentDetailsViewBody> {
                 // if  is specific to the formKey and validate
                 if (formKey.currentState!.validate()) {
                   formKey.currentState!.save();
+                  log('paied');
                 } else {
                   // else  is specific to the autovalidateMode
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return const ThankYouView();
+                      },
+                    ),
+                  );
                   autovalidateMode = AutovalidateMode.always;
                   setState(() {});
                 }
