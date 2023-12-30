@@ -36,6 +36,7 @@ class _PaymentDetailsViewBodyState extends State<PaymentDetailsViewBody> {
                 } else {
                   // else  is specific to the autovalidateMode
                   autovalidateMode = AutovalidateMode.always;
+                  setState(() {});
                 }
               },
               text: 'Pay',
