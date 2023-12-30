@@ -2,6 +2,7 @@ import 'package:check_out_app/core/widgets/background_of_thank_you_card.dart';
 import 'package:check_out_app/core/widgets/custom_check_icon.dart';
 import 'package:check_out_app/core/widgets/custom_dashed_line.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class ThankYouBody extends StatelessWidget {
   const ThankYouBody({super.key});
@@ -13,6 +14,10 @@ class ThankYouBody extends StatelessWidget {
       child: Stack(
         clipBehavior: Clip.none,
         children: [
+          Positioned(
+            top: -35,
+            child: SvgPicture.asset('assets/images/arrow.svg'),
+          ),
           const BackgroundOfThankYouCard(),
           Positioned(
             bottom: MediaQuery.sizeOf(context).height * .2,
