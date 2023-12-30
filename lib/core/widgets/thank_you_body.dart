@@ -1,3 +1,4 @@
+import 'package:check_out_app/core/widgets/background_of_thank_you_card.dart';
 import 'package:flutter/material.dart';
 
 class ThankYouBody extends StatelessWidget {
@@ -10,14 +11,7 @@ class ThankYouBody extends StatelessWidget {
       child: Stack(
         clipBehavior: Clip.none,
         children: [
-          Container(
-            decoration: ShapeDecoration(
-              color: const Color(0xFFD9D9D9),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(20),
-              ),
-            ),
-          ),
+          const BackgroundOfThankYouCard(),
           Positioned(
             bottom: MediaQuery.sizeOf(context).height * .2,
             left: -20,
@@ -46,6 +40,26 @@ class ThankYouBody extends StatelessWidget {
                   Icons.check,
                   color: Colors.white,
                   size: 50,
+                ),
+              ),
+            ),
+          ),
+          Positioned(
+            // bottom: 0,
+            bottom: MediaQuery.sizeOf(context).height * .2 + 20,
+            left: 16 + 12,
+            right: 16 + 12,
+            child: Row(
+              children: List.generate(
+                22,
+                (index) => Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 2),
+                    child: Container(
+                      height: 2,
+                      color: const Color(0xFFB7B7B7),
+                    ),
+                  ),
                 ),
               ),
             ),
