@@ -1,3 +1,4 @@
+import 'package:check_out_app/core/widgets/custom_app_bar_widget.dart';
 import 'package:check_out_app/core/widgets/thank_you_body.dart';
 import 'package:flutter/material.dart';
 
@@ -6,8 +7,9 @@ class ThankYouView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: ThankYouBody(),
+    return Scaffold(
+      appBar: buildAppBar(),
+      body: const ThankYouBody(),
     );
   }
 }
