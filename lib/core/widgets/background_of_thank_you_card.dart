@@ -1,5 +1,6 @@
 import 'package:check_out_app/core/utils/styles.dart';
 import 'package:check_out_app/core/widgets/card_info_widget.dart';
+import 'package:check_out_app/core/widgets/paid_widget.dart';
 import 'package:check_out_app/core/widgets/payment_item_info.dart';
 import 'package:check_out_app/widgets/total_price_widget.dart';
 import 'package:flutter/material.dart';
@@ -66,34 +67,14 @@ class BackgroundOfThankYouCard extends StatelessWidget {
             ),
             const CardInfoWidget(),
             const Spacer(),
-            Row(
+            const Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Icon(
+                Icon(
                   FontAwesomeIcons.barcode,
                   size: 50,
                 ),
-                Container(
-                  width: 113,
-                  height: 58,
-                  decoration: ShapeDecoration(
-                    shape: RoundedRectangleBorder(
-                      side: const BorderSide(
-                        width: 1.50,
-                        color: Color(0xFF34A853),
-                      ),
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                  ),
-                  child: Center(
-                    child: Text(
-                      'PAID',
-                      textAlign: TextAlign.center,
-                      style: Styles.style24
-                          .copyWith(color: const Color(0xFF34A853)),
-                    ),
-                  ),
-                )
+                PaidWidget(),
               ],
             ),
             SizedBox(
