@@ -1,4 +1,6 @@
 buildscript {
+    // check if ext.kotlin_version >= 1.5.0 
+    // default in this case is 1.7.10 => condition true 
     ext.kotlin_version = '1.7.10'
     repositories {
         google()
