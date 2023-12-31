@@ -63,7 +63,7 @@ class BackgroundOfThankYouCard extends StatelessWidget {
             ),
             const TotalPriceWidget(title: 'Total', value: '\$50.97'),
             const SizedBox(
-              height: 23,
+              height: 55,
             ),
             const CardInfoWidget(),
             const Spacer(),
