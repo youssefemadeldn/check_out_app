@@ -8,6 +8,8 @@ buildscript {
     }
 
     dependencies {
+        // Using an up-to-date Android gradle build tools version: example
+        classpath 'com.android.tools.build:gradle:8.1.3'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
