@@ -15,3 +15,5 @@ class CheckOutApp extends StatelessWidget {
     );
   }
 }
+
+// 7. Create account => https://dashboard.stripe.com/register
