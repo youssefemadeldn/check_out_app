@@ -16,4 +16,11 @@ class CheckOutApp extends StatelessWidget {
   }
 }
 
-// 7. Create account => https://dashboard.stripe.com/register
+
+
+        /*
+         Main Steps:
+  1-  Create account => https://dashboard.stripe.com/register
+  2- create payment intent (amount , currency)
+
+        */
