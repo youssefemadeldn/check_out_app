@@ -29,6 +29,7 @@ class CheckOutApp extends StatelessWidget {
       
     3. Integrate the payment sheet [Client Side]
       3-  initPaymentSheet ( paymentIntentClientSecret )
+      4- prestPaymentSheet()
 
 
 
@@ -36,6 +37,8 @@ class CheckOutApp extends StatelessWidget {
   1- Create account => https://dashboard.stripe.com/register 
   2- paymentIntentObjectAsReturnType createPaymentIntentMethod ( amount , currency )
   3- initPaymentSheet ( paymentIntentClientSecret ) 
+  4- prestPaymentSheet()
+
 
         */
 
