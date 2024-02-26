@@ -16,9 +16,7 @@ class CheckOutApp extends StatelessWidget {
   }
 }
 
-
-
-        /*
+/*
 
     Main Steps:
     1. Set up Stripe [Server Side] [Client Side]
@@ -43,6 +41,3 @@ class CheckOutApp extends StatelessWidget {
 
 
         */
-
-
-
