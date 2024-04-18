@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:check_out_app/Features/checkout/data/models/payment_intent_input_model.dart';
 import 'package:check_out_app/Features/checkout/data/models/payment_intent_respons_model/payment_intent_response_model/payment_intent_response_model.dart';
 import 'package:check_out_app/core/utils/api_keys.dart';
+import 'package:flutter_stripe/flutter_stripe.dart';
 
 import 'package:check_out_app/core/utils/api_services.dart';
 
@@ -24,6 +25,15 @@ class StripeServices {
         PaymentIntentResponseModel.fromJson(jsonResponse.data);
 
     return paymentIntentResponseModel;
+  }
+
+  Future initPaymentSheet({required String paymentIntentClientSecret}) async {
+    await Stripe.instance.initPaymentSheet(
+      paymentSheetParameters: SetupPaymentSheetParameters(
+        merchantDisplayName: 'Flutter Stripe Store Demo',
+        paymentIntentClientSecret: paymentIntentClientSecret,
+      ),
+    );
   }
   /*
    - paymentIntentObjectAsReturnType createPaymentIntentMethod ( amount , currency )
