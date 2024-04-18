@@ -35,6 +35,11 @@ class StripeServices {
       ),
     );
   }
+
+  Future displayPaymentSheet() async {
+    await Stripe.instance.presentPaymentSheet();
+  }
+
   /*
    - paymentIntentObjectAsReturnType createPaymentIntentMethod ( amount , currency )
    - initPaymentSheet ( paymentIntentClientSecret )
