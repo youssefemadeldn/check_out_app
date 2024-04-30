@@ -27,6 +27,7 @@ class CustomButtonBlocConsumer extends StatelessWidget {
         }
 
         if (state is StripePaymentFailure) {
+          Navigator.pop(context);
           SnackBar snackBar = SnackBar(
             content: Text(state.errMessage),
           );

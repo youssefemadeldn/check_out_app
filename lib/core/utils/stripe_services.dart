@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:check_out_app/Features/checkout/data/models/payment_intent_input_model.dart';
 import 'package:check_out_app/Features/checkout/data/models/payment_intent_respons_model/payment_intent_response_model/payment_intent_response_model.dart';
 import 'package:check_out_app/core/utils/api_keys.dart';
+import 'package:dio/dio.dart';
 import 'package:flutter_stripe/flutter_stripe.dart';
 
 import 'package:check_out_app/core/utils/api_services.dart';
@@ -16,6 +17,7 @@ class StripeServices {
       PaymentIntentInputModel paymentIntentInputModel) async {
     var jsonResponse = await apiServices.post(
         url: 'https://api.stripe.com/v1/payment_intents',
+        contentType: Headers.formUrlEncodedContentType,
         body: paymentIntentInputModel.toJson(),
         token: ApiKeys.secretkey);
 
