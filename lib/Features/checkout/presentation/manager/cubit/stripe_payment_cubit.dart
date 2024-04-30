@@ -3,8 +3,7 @@ import 'dart:developer';
 import 'package:bloc/bloc.dart';
 import 'package:check_out_app/Features/checkout/data/models/payment_intent_input_model.dart';
 import 'package:check_out_app/Features/checkout/data/repos/checkout_repo.dart';
-import 'package:dio/dio.dart';
-import 'package:meta/meta.dart';
+import 'package:flutter/material.dart';
 
 part 'stripe_payment_state.dart';
 
@@ -27,7 +26,7 @@ class StripePaymentCubit extends Cubit<StripePaymentState> {
 
   @override
   void onChange(Change<StripePaymentState> change) {
-    log(Change as String);
+    log(change.toString());
     super.onChange(change);
   }
 }
