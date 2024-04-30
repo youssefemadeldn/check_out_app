@@ -1,3 +1,4 @@
+import 'package:check_out_app/Features/checkout/data/models/payment_intent_input_model.dart';
 import 'package:check_out_app/Features/checkout/presentation/manager/cubit/stripe_payment_cubit.dart';
 import 'package:check_out_app/Features/checkout/presentation/views/thank_you_view.dart';
 import 'package:check_out_app/core/widgets/custom_button.dart';
@@ -35,6 +36,12 @@ class CustomButtonBlocConsumer extends StatelessWidget {
       //  1
       builder: (context, state) {
         return CustomButton(
+            onTap: () {
+              PaymentIntentInputModel paymentIntentInputModel =
+                  PaymentIntentInputModel(amount: '100', currency: "USD");
+              BlocProvider.of<StripePaymentCubit>(context).mackPayment(
+                  paymentIntentInputModel: paymentIntentInputModel);
+            },
             isLoading: state is StripePaymentLoading ? true : false,
             text: 'Continue');
       },
