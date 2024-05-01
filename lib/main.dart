@@ -44,3 +44,9 @@ class CheckOutApp extends StatelessWidget {
 
 
         */
+
+  
+  // paymentIntentObjectAs_ReturnType createPaymentIntentMethod ( amount, currency, customerId)
+  // keySecretAs_ReturnType  createEphemeralKey( stripeVersion, customerId )
+  // initPaymentSheet ( paymentIntentClientSecret, merchantDisplayName, ephemeralKeySecret )
+  // prestPaymentSheet() 
